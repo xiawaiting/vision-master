@@ -1,2 +1,2 @@
 from .pointoperators import *
-from .histogram_
+from .histogram_manipulations import *
