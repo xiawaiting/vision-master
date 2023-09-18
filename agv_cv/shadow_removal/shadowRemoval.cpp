@@ -88,3 +88,51 @@ cv::Mat ShadowRemoval::shadowRemoval(){
     
     cvtColor(original_image,image_ycrcb,CV_BGR2YCrCb);
     binary = shadowDetection(image_ycrcb);    
+    if (debug_mode > 0){
+        cv::namedWindow("binary_image",1);
+        cv::imshow("binary_image",binary);
+        cv::waitKey(20);
+    }
+    cv::Mat element = cv::getStructuringElement( cv::MORPH_ELLIPSE,
+                                       cv::Size( 7,7),
+                                       cv::Point( 3, 3) );
+    dilate(binary,binary,element);
+    element = cv::getStructuringElement( cv::MORPH_ELLIPSE,
+                                       cv::Size( 5,5),
+                                       cv::Point( 2, 2) );
+    erode(binary,binary,element);
+    
+    if (debug_mode > 0){
+        cv::namedWindow("eroded_image",1);
+        cv::imshow("eroded_image",binary);
+        cv::waitKey(20);
+    }
+    
+    for (int i=0;i<image_ycrcb.rows;i++){
+        for (int j=0;j<image_ycrcb.cols;j++){
+            if (binary.at<uchar>(i,j)==0){
+                shadow_mean += image_ycrcb.at<cv::Vec3b>(i,j)[0];
+                count_shadow++;
+            }
+            else{
+                non_shadow_mean += image_ycrcb.at<cv::Vec3b>(i,j)[0];
+                count_non_shadow++;
+            }
+        }
+    }
+    if (count_shadow != 0){
+        difference = non_shadow_mean/count_non_shadow - shadow_mean/count_shadow;
+        for (int i=0;i<image_ycrcb.rows;i++){
+            for (int j=0;j<image_ycrcb.cols;j++){
+                if (binary.at<uchar>(i,j)==0){
+                    image_ycrcb.at<cv::Vec3b>(i,j)[0] += difference/2; // Y adjustment
+                    image_ycrcb.at<cv::Vec3b>(i,j)[2] -= difference/6; // Colour adjustment
+                }
+            }
+        }
+        cvtColor(image_ycrcb,final,CV_YCrCb2BGR);
+        return final;
+    }
+    else
+        return original_image;
+}
