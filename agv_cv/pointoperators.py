@@ -16,4 +16,7 @@ def scaling(img, k):
     return simg
 
 
-def
+def sawtooth(img, slope, step):
+    swimg = (img % step)*slope
+    np.clip(swimg, 0, 255, out=swimg)
+    return
