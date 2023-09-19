@@ -9,4 +9,7 @@ int main(int argc, char* argv[]){
   cv::Mat original;
   cv::namedWindow("output",1);
   while(1){
-    capture >> origi
+    capture >> original;
+    cv::namedWindow("original_video",1);
+    cv::imshow("original_video",original);
+    cv::imwr
