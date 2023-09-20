@@ -12,4 +12,9 @@ int main(int argc, char* argv[]){
     capture >> original;
     cv::namedWindow("original_video",1);
     cv::imshow("original_video",original);
-    cv::imwr
+    cv::imwrite("final_output.jpg",original);
+    cv::waitKey(20);
+    while(original.empty()){
+      capture >> original;
+    }
+    c
