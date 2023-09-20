@@ -17,4 +17,6 @@ int main(int argc, char* argv[]){
     while(original.empty()){
       capture >> original;
     }
-    c
+    cv::Mat final_image(original.rows,original.cols,CV_8UC3,cvScalarAll(0));
+    if (argc == 3){
+  
