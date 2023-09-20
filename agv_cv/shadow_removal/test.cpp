@@ -19,4 +19,8 @@ int main(int argc, char* argv[]){
     }
     cv::Mat final_image(original.rows,original.cols,CV_8UC3,cvScalarAll(0));
     if (argc == 3){
-  
+      ShadowRemoval Shadow(original,atoi(argv[2]));
+    	final_image = Shadow.shadowRemoval();
+    }
+    else{
+    	Sha
