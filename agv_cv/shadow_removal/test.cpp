@@ -27,3 +27,6 @@ int main(int argc, char* argv[]){
     	final_image = Shadow.shadowRemoval();
     }
     cv::imshow("output",final_image);
+    cv::waitKey(20);
+  }
+}
