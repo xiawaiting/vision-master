@@ -23,4 +23,7 @@ int main(int argc, char* argv[]){
     	final_image = Shadow.shadowRemoval();
     }
     else{
-    	Sha
+    	ShadowRemoval Shadow(original,0);
+    	final_image = Shadow.shadowRemoval();
+    }
+    cv::imshow("output",final_image);
