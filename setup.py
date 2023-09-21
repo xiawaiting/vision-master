@@ -1,2 +1,6 @@
 #! /usr/bin/env python
-from distu
+from distutils.core import setup
+setup(name='agv_cv',
+      version='0.1',
+      packages=['agv_cv'],
+   
