@@ -8,4 +8,4 @@ setup(name='agv_cv',
           'pillow',
           'numpy',
       ],
-      
+      )
