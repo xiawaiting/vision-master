@@ -11,4 +11,4 @@ For further guidance, please go through the IPython Notebook `Tutorial 1.ipynb` 
 Using the Tutorial
 ------------------
 
-The tutorial is an IPython Notebook, which is 
+The tutorial is an IPython Notebook, which is an interactive computational environment that combines formatted text instructions and executa
