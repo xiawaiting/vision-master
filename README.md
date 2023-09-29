@@ -6,4 +6,9 @@ Vision Master
 
  Feel free to ask questions through our public chat room at gitter: [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/xiawaiting/vision-master?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
 
-For further guidance, please go through the IPython Notebook `Tuto
+For further guidance, please go through the IPython Notebook `Tutorial 1.ipynb` or get in touch with us via email.
+
+Using the Tutorial
+------------------
+
+The tutorial is an IPython Notebook, which is 
