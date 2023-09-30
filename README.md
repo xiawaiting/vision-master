@@ -13,4 +13,8 @@ Using the Tutorial
 
 The tutorial is an IPython Notebook, which is an interactive computational environment that combines formatted text instructions and executable code cells.  
 
-* **Install IPython**: You can easily install it through the anaconda package availabl
+* **Install IPython**: You can easily install it through the anaconda package available at the [Continuum Analytics web site](http://continuum.io/downloads).
+
+* Clone the repo:
+
+```git clone https://github
