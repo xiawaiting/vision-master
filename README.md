@@ -23,4 +23,4 @@ The tutorial is an IPython Notebook, which is an interactive computational envir
 
 ```ipython notebook Tutorial\ 1.ipynb &```  
 
-* You can also view the Tutorial online at [nbviewer](http://nbviewer.ipython.org/github/xiawaiting/vision-
+* You can also view the Tutorial online at [nbviewer](http://nbviewer.ipython.org/github/xiawaiting/vision-master/blob/master/Tutorial%201.ipynb), although the code cells on nbviewer are not executable.
