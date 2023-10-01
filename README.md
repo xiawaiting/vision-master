@@ -21,4 +21,6 @@ The tutorial is an IPython Notebook, which is an interactive computational envir
 
 * Open the Tutorial:
 
-```ipython notebook Tutorial\ 1.ipynb &``` 
+```ipython notebook Tutorial\ 1.ipynb &```  
+
+* You can also view the Tutorial online at [nbviewer](http://nbviewer.ipython.org/github/xiawaiting/vision-
