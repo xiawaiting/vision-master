@@ -17,4 +17,8 @@ The tutorial is an IPython Notebook, which is an interactive computational envir
 
 * Clone the repo:
 
-```git clone https://github
+```git clone https://github.com/xiawaiting/vision-master.git```  
+
+* Open the Tutorial:
+
+```ipython notebook Tutorial\ 1.ipynb &``` 
